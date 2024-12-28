@@ -1,4 +1,4 @@
-# Intro to programming
+# 001 - Intro to programming
 Programming languages live all around; they can be used in any field, and they are defined as "languages for communicating instructions to a machine" [^1].
 
 ## What is programming?
