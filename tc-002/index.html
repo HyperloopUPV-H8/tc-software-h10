@@ -6,14 +6,39 @@
     <link rel="stylesheet" href="styles-dark-mode.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <p>
-      This is an example webpage for the Hyperloop UPV Software Training Center
-    </p>
+    <div class="calculator">
+      <h1>Calculator</h1>
+      <p>
+        This is an example webpage for the Hyperloop UPV Software Training
+        Center
+      </p>
 
-    <input type="text" class="input__x" />
-    <input type="text" class="input__y" />
-    <button id="calculate-button">Calculate</button>
+      <input
+        type="text"
+        class="calculator__input calculator__input_x"
+        placeholder="First value"
+      />
+      <input
+        type="text"
+        class="calculator__input calculator__input_y"
+        placeholder="Second value"
+      />
+
+      <div class="calculator__buttons">
+        <button class="calculator__button" id="calculate-button-sum">+</button>
+        <button class="calculator__button" id="calculate-button-rest">-</button>
+        <button class="calculator__button" id="calculate-button-mult">*</button>
+        <button class="calculator__button" id="calculate-button-div">/</button>
+      </div>
+
+      <input
+        readonly
+        type="text"
+        class="calculator__input calculator__input_result"
+        placeholder="Result"
+        disabled
+      />
+    </div>
 
     <!-- Link to our JS file -->
     <script src="script.js"></script>
