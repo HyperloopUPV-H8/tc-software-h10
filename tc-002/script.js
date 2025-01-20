@@ -1,10 +1,14 @@
 console.log("Hello from JS!");
 
 // Grab the button from the DOM
-const myButton = document.getElementById("myButton");
+const calculateButton = document.getElementById("calculate-button");
+
+// Inputs
+const inputX = document.querySelector(".input__x");
+const inputY = document.querySelector(".input__y");
 
 // Add a click listener
-myButton.addEventListener("click", function () {
-        alert("Button clicked!");
-        console.log("The user has clicked the button");
+calculateButton.addEventListener("click", function () {
+  const result = parseInt(inputX.value) + parseInt(inputY.value);
+  console.log(`Result: ${result}`);
 });
