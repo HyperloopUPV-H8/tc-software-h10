@@ -1,0 +1,22 @@
+.dark-mode {
+        background-color: #000; /* Dark background */
+}
+
+.dark-mode p {
+        color: #fff;
+}
+
+/* Override the heading in dark mode */
+.dark-mode h1 {
+        color: #7398ad; /* A bright accent color for headings */
+}
+
+/* Override the button styling in dark mode */
+.dark-mode button {
+        background-color: #c1531b;
+        color: #fff;
+}
+
+.dark-mode button:hover {
+        background-color: #ee7623;
+}
