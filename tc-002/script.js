@@ -9,10 +9,7 @@ const calculateDivButton = document.getElementById("calculate-button-div");
 // Inputs
 const inputX = document.querySelector(".calculator__input_x");
 const inputY = document.querySelector(".calculator__input_y");
-
 const inputResult = document.querySelector(".calculator__input_result");
-
-const inputError = document.querySelector(".calculator__input_error");
 
 // Math actions
 const sum = (a, b) => {

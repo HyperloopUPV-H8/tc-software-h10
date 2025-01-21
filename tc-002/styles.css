@@ -69,6 +69,10 @@ button:hover {
   border: 2px solid #c1531b;
 }
 
+.calculator__input_result {
+  min-width: 400px;
+}
+
 .calculator__buttons {
   display: flex;
   gap: 8px;
