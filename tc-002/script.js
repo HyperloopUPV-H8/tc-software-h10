@@ -1,18 +1,11 @@
-// console.log("Hello from JS!");
 
 
-// Grab the button from the DOM
 const myButton = document.getElementById("myButton");
 
-// import {evaluateExp} from './buhsan-calculator.js';
-// Add a click listener
 
 function calc(one, two, oper) {
         if (oper === '/' && two === 0) {
                 document.getElementById('outputField').textContent = "Error: Division by zero";
-        //     console.log("Error: Division by zero");
-        //     rl.close();
-        //     process.exit(0);
                 return;
         }
     
