@@ -13,45 +13,45 @@ const inputResult = document.querySelector(".calculator__input_result");
 
 // Math actions
 const sum = (a, b) => {
-  return a + b;
+        return a + b;
 };
 
 const substract = (a, b) => {
-  return a - b;
+        return a - b;
 };
 
 const multiply = (a, b) => {
-  return a * b;
+        return a * b;
 };
 
 const divide = (a, b) => {
-  return a / b;
+        return a / b;
 };
 
 function isNotNumeric(value) {
-  return isNaN(value) || typeof value === "boolean";
+        return isNaN(value) || typeof value === "boolean";
 }
 
 // That's a common function for all math related event listeners
 const calculateAction = (action) => {
-  const x = parseInt(inputX.value); // First input value
-  const y = parseInt(inputY.value); // Second input value
+        const x = parseInt(inputX.value); // First input value
+        const y = parseInt(inputY.value); // Second input value
 
-  // If X is non-numeric value show error and prevent action
-  if (isNotNumeric(x)) {
-    inputResult.value = "First input value is invalid";
-    return;
-  }
+        // If X is non-numeric value show error and prevent action
+        if (isNotNumeric(x)) {
+                inputResult.value = "First input value is invalid";
+                return;
+        }
 
-  // If Y is non-numeric value show error and prevent action
-  if (isNotNumeric(y)) {
-    inputResult.value = "Second input value is invalid";
-    return;
-  }
+        // If Y is non-numeric value show error and prevent action
+        if (isNotNumeric(y)) {
+                inputResult.value = "Second input value is invalid";
+                return;
+        }
 
-  const result = action(x, y);
-  inputResult.value = result;
-  console.log(`Result: ${result}`);
+        const result = action(x, y);
+        inputResult.value = result;
+        console.log(`Result: ${result}`);
 };
 
 // Add a sum button click listener
