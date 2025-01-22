@@ -35,3 +35,9 @@ button {
 button:hover {
         background-color: #c1531b; /* Slightly darker on hover */
 }
+
+.input_output {
+        display: block;
+        margin: 1rem auto;
+        border: none;
+}

@@ -1,18 +1,21 @@
 <!doctype html>
 <html>
         <head>
-                <title>Hyperloop Software TC</title>
+                <title>Simple calculator</title>
                 <link rel="stylesheet" href="styles.css" />
                 <link rel="stylesheet" href="styles-dark-mode.css" />
         </head>
         <body>
-                <h1>Hello World!</h1>
+                <h1>Simple Calculator</h1>
                 <p>
-                        This is an example webpage for the Hyperloop UPV
-                        Software Training Center
+                        Enter an operation in one line (Ex: (2+2)*2 )
                 </p>
-
-                <button id="myButton">Click me!</button>
+                <div>
+                        <input class="input_output" type="text" id="inputField" placeholder="Enter some operation here">
+                        <p class="input_output" id="outputField">The result will appear here</p>
+                        <button id="myButton">Click me!</button>
+                </div>
+                
 
                 <!-- Link to our JS file -->
                 <script src="script.js"></script>
