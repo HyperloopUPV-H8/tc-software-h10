@@ -1,24 +1,30 @@
-const jokeText = document.getElementById("jokeText");
-const jokeBtn = document.getElementById("jokeBtn");
+const meowFactText = document.getElementById("meowFactText");
+const meowButton = document.getElementById("meowButton");
 
-jokeBtn.addEventListener("click", getJoke);
+meowButton.addEventListener("click", getMeowFact);
 
-async function getJoke() {
-        jokeText.textContent = "Loading joke...";
+async function getMeowFact() {
+        // Change buttons text to loading state
+        meowButton.textContent = "Loading fact...";
+
         try {
-                const response = await fetch(
-                        "https://api.chucknorris.io/jokes/random",
-                );
+                const response = await fetch("https://meowfacts.herokuapp.com");
+
                 if (!response.ok) {
                         throw new Error(
-                                `HTTP error! status: ${response.status}`,
+                                `HTTP error! status: ${response.status}`
                         );
                 }
 
-                const data = await response.json();
-                jokeText.textContent = data.value;
+                const data = (await response.json()).data;
+                meowFactText.textContent = data[0];
         } catch (error) {
-                jokeText.textContent = "Failed to load joke.";
+                meowFactText.textContent = "Failed to load joke.";
                 console.error(error);
         }
+
+        // Return initial button text from loading state
+        meowButton.textContent = "Get Fact";
 }
+
+getMeowFact();
