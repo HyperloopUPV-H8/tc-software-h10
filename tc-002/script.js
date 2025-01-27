@@ -49,6 +49,12 @@ const calculateAction = (action) => {
                 return;
         }
 
+        // Prevent dividing by zero
+        if (action === divide && y === 0) {
+                inputResult.value = "Can not divide by zero";
+                return;
+        }
+
         const result = action(x, y);
         inputResult.value = result;
         console.log(`Result: ${result}`);
