@@ -1,0 +1,22 @@
+/* Styles specific to jokes page */
+
+main {
+    margin: 20px;
+}
+
+#jokeText {
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #ff9800;
+    color: #fff;
+    font-size: 1rem;
+}
+button:hover {
+    background-color: #f57c00;
+}

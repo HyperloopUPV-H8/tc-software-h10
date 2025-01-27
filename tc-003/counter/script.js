@@ -8,17 +8,17 @@ let counter = 0;
 
 // Functions to handle state and update DOM
 function updateCounterValue() {
-        counterValueEl.innerText = `Counter: ${counter}`;
+    counterValueEl.innerText = `Counter: ${counter}`;
 }
 
 function incrementCounter() {
-        counter++;
-        updateCounterValue();
+    counter++;
+    updateCounterValue();
 }
 
 function resetCounter() {
-        counter = 0;
-        updateCounterValue();
+    counter = 0;
+    updateCounterValue();
 }
 
 // Event Listeners
