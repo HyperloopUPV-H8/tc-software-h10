@@ -1,0 +1,15 @@
+body {
+        font-family: 1.5rem;
+        margin: 20px;
+}
+
+#counterValue {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+}
+
+button {
+        margin-right: 0.5rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+}
