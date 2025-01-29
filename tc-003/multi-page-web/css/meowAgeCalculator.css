@@ -1,0 +1,26 @@
+/* Specific styles for the calculator page */
+
+#display {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 200px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.age-calculator__block {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

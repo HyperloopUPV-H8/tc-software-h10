@@ -1,0 +1,14 @@
+#counterValue {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#meowFactText {
+  max-width: 1000px;
+}
+
+button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

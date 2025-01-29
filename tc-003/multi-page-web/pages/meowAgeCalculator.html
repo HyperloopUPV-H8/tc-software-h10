@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <!-- Main site styles -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Calculator-specific styles -->
+    <link rel="stylesheet" href="../css/meowAgeCalculator.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.7.0/lib/browser/math.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Cat's Age Calculator</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="active">
+            <a href="./meowAgeCalculator.html">Meow Age Calculator</a>
+          </li>
+          <li><a href="./meowFacts.html">Meow Facts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div style="display: flex">
+        <div class="age-calculator__block">
+          <h2>Enter your cat's age below</h2>
+          <input
+            class="age-calculator__cat-age"
+            type="text"
+            placeholder="Cat's age"
+          />
+        </div>
+        <div class="age-calculator__block">
+          <h2>And you will get it's age in human years</h2>
+          <input
+            disabled
+            class="age-calculator__human-age"
+            type="text"
+            placeholder="Human age"
+          />
+        </div>
+      </div>
+    </main>
+
+    <footer><p>© 2025. Maxim Grivennyy for UPV Hyperloop</p></footer>
+
+    <!-- JavaScript for Calculator -->
+    <script src="../scripts/meowAgeCalculator.js"></script>
+  </body>
+</html>
