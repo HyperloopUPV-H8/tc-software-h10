@@ -1,0 +1,12 @@
+/* Specific styles for the calculator page */
+
+main {
+    margin: 20px;
+}
+.temperature {
+    color: #000;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+}

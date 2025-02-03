@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Weather Multi-Page</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Weather Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="pages/temperature.html">Temperature</a>
+                    </li>
+                    <li>
+                        <a href="pages/other.html">Other info</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Weather data</h1>
+            <input type="text" id="input" placeholder="Enter a name of the city here">
+            <div id="weatherDiv">
+                <h2 id="weatherTitle"></h2>
+                <p id="weatherDescription"></p>
+                <img id="weatherIcon" alt=""/>
+                <p id="weatherName"></p>
+            </div>
+            <button id="weatherBtn">Search</button>
+        </main>
+        <footer>
+            <p>Bogdan Zakharov</p>
+        </footer>
+
+        <script src="scripts/main.js"></script>
+
+    </body>
+</html>

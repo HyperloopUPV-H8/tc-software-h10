@@ -1,0 +1,13 @@
+/* Styles specific to jokes page */
+
+main {
+    margin: 20px;
+}
+
+.other {
+    color: #000;
+    line-height: 1.5;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+}
