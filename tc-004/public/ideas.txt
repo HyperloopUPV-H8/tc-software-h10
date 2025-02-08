@@ -1,0 +1,9 @@
+pagina-backend/
+│
+├── public/             # Archivos estáticos
+│   ├── index.html      # Página web principal
+│   ├── styles.css      # Estilos CSS
+│   └── script.js       # Lógica en el cliente
+│
+├── server.js           # Servidor en Node.js
+└── package.json        # Configuración del proyecto

@@ -1,0 +1,22 @@
+/* Styles specific to cats page */
+
+main {
+    margin: 10px;
+}
+
+#catText {
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 1rem;
+}
+button:hover {
+    background-color: #0056b3;
+}

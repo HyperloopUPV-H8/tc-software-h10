@@ -1,0 +1,43 @@
+/* Basic styling for the entire website */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+header,
+nav,
+footer {
+    background-color: #d7e8f7;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+}
+
+nav ul li a:hover {
+    font-style: italic; /* Cursiva al pasar el ratón */
+    color: #0056b3; /* Cambia a un tono azul oscuro */
+    transition: all 0.3s ease; /* Suaviza el cambio */
+    text-decoration: underline;
+}
