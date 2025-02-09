@@ -7,3 +7,20 @@ pagina-backend/
 │
 ├── server.js           # Servidor en Node.js
 └── package.json        # Configuración del proyecto
+
+**Expres**
+
+An express app allows to create diferent endpoints so the user can navigate
+and to handle the requests that the user does.
+
+GET: When the user navigates througth the browser and requests some data on the server and not modifies or updates anything
+    app.get(url that the user will navegate,(request,response) =>{
+            readFile (nuestrapagianwen, utf8,(ere,html) =>{
+                if (err){
+                    response.status(500).send('sorry,out of order');
+                }
+                response.send(html)
+            })
+    })
+    -request: user incoming data
+    -response : my outgoing data
