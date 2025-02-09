@@ -3,7 +3,20 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima igual a la ventana del navegador */
     padding: 0;
+}
+main {
+    flex: 1; /* Se expande para llenar el espacio disponible */
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    margin: 10px;
 }
 
 header,
@@ -11,19 +24,59 @@ nav,
 footer {
     background-color: #d7e8f7;
     padding: 1rem;
+    border-radius : 15px;
 }
 
 h1 {
-    margin: 10px;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 10px; /* Espaciado superior opcional */
+    margin: 30px;
 }
+h2{
+    padding: 30px;
+    margin: auto;
+}
+
+nav {
+    display: flex; /* Organiza los elementos del nav horizontalmente */
+    justify-content: space-around; /* Espacia los elementos de forma uniforme */
+    align-items: center; /* Centra verticalmente los elementos dentro del nav */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    background-color: #e3f2fd; /* Fondo del nav */
+    padding: 10px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    margin:0;
+    padding :0;
     display: flex;
-    gap: 1rem;
+    gap: 20px;
+    justify-content: space-around; /* Espacia los elementos de forma uniforme */
+    flex-direction:row;
+    font-weight: bold; /* Texto en negrita */
+
 }
+nav a {
+    display: inline-block; /* Hace que los enlaces sean como bloques alineados */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado */
+    color: #000; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin: 0;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+
+}
+
+nav a:hover {
+    background-color: #bbdefb; /* Cambia el color de fondo al pasar el ratón */
+}
+
 
 nav ul li {
     display: inline;
@@ -33,11 +86,13 @@ nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: bolder;
+    
 }
 
-nav ul li a:hover {
+nav ul:hover {
     font-style: italic; /* Cursiva al pasar el ratón */
     color: #0056b3; /* Cambia a un tono azul oscuro */
     transition: all 0.3s ease; /* Suaviza el cambio */
     text-decoration: underline;
 }
+
