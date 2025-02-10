@@ -1,0 +1,92 @@
+.speedbox {
+        margin: 5em;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        position: relative;
+}
+
+.speedbox__groove {
+        height: 100px;
+        width: 200px;
+        background: transparent;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border: 20px solid #eee;
+        border-bottom: 0;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+}
+.speedbox__score {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: rotate(-45deg);
+        height: 200px;
+        width: 200px;
+        background: transparent;
+        border-radius: 50%;
+        border: 20px solid #5c6f7b;
+        border-color: transparent transparent #5c6f7b #5c6f7b;
+        box-sizing: border-box;
+        cursor: pointer;
+        z-index: 1;
+        transition: transform 0.3s ease;
+}
+.speedbox__base {
+        width: 240px;
+        height: 100px;
+        background: white;
+        position: relative;
+        top: 100px;
+        z-index: 20;
+}
+
+.speedbox__base:before {
+        content: "";
+        width: 240px;
+        position: absolute;
+        top: 0;
+        border-bottom: 1px solid #eee;
+        box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.speedbox__odo {
+        text-align: center;
+        position: absolute;
+        color: #5c6f7b;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        i {
+                font-size: 13px;
+                opacity: 0.6;
+        }
+        > div {
+                margin-bottom: 0;
+        }
+        span {
+                font-size: 0.7em;
+        }
+}
+.speedbox__ping {
+        font-size: 13px;
+}
+
+.speedbox__up {
+        font-size: 13px;
+        line-height: 1.5em;
+}
+
+.speedbox__down {
+        font-size: 25px;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        line-height: 1.2em;
+}
