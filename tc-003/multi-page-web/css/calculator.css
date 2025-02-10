@@ -1,0 +1,22 @@
+/* Specific styles for the calculator page */
+
+main {
+    margin: 20px;
+}
+
+#display {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    width: 200px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
