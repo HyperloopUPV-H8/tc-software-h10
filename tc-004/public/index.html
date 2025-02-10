@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hyperloop Data Monitor</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            h1 {
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            button {
+                margin-top: 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hyperloop Data Monitor</h1>
+        <div>
+            <p>
+                <strong>Elevation:</strong> <span id="elevationVal">N/A</span> m
+            </p>
+            <p>
+                <strong>Velocity:</strong>
+                <span id="velocityVal">N/A</span> km/h
+            </p>
+            <p><strong>Voltage:</strong> <span id="voltageVal">N/A</span> V</p>
+            <p><strong>Current:</strong> <span id="currentVal">N/A</span> A</p>
+        </div>
+
+        <button id="toggleGeneratorBtn">Start Random Generator</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>
