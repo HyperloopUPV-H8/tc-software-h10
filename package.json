@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cross": "^1.0.0",
+    "express": "^4.21.2",
+    "node": "^23.7.0"
+  }
+}
