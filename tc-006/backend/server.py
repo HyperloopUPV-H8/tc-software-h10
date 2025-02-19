@@ -10,13 +10,22 @@ connected_clients = set()
 async def send_simulation_state():
     """Broadcast simulation state to all clients."""
     if connected_clients:
-        message = json.dumps({
-            "type": "simulation",
-            "statusCode": 200,
-            "ok": True,
-            "message": "Current simulation state",
-            "isSimulationRunning": simulation_running
-        })
+        if not simulation_running:
+            message = json.dumps({
+                "type": "simulation",
+                "statusCode": 201,
+                "ok": True,
+                "message": "Simulation was stopped!",
+                "isSimulationRunning": simulation_running
+            })
+        else:
+            message = json.dumps({
+                "type": "simulation",
+                "statusCode": 200,
+                "ok": True,
+                "message": "Simulation started!",
+                "isSimulationRunning": simulation_running
+            })
         await asyncio.gather(*(client.send(message) for client in connected_clients))
 
 async def broadcast(message):
@@ -32,10 +41,7 @@ async def handle_client(websocket):
     global simulation_running
     connected_clients.add(websocket)  # Track connected clients
     print(f"New client connected ({len(connected_clients)} total).")
-
-    # Send initial state
-    await send_simulation_state()
-
+    
     try:
         # Send initial state
         await send_simulation_state()
