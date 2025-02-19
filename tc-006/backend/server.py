@@ -21,7 +21,7 @@ async def send_simulation_state():
 
 async def broadcast(message):
     """Safely send a message to all connected clients."""
-    for client in connected_clients:
+    for client in list(connected_clients):
         try:
             await client.send(message)
         except:
