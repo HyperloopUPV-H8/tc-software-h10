@@ -1,0 +1,123 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overall layout */
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: Helvetica, sans-serif;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+}
+
+/* Container for three columns */
+.container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Container for three columns fills full height of main */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 80%;
+}
+
+/* General column styling */
+.column {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    overflow: auto;
+}
+
+/* Charts Column Specifics */
+.charts {
+    /* Ensure the charts column takes full height */
+    height: 100%;
+}
+
+.charts h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Each chart container is constrained so they don't expand beyond one third of the screen */
+.chart-container {
+    width: 100%;
+    height: calc(
+        (96% - 40px) / 4
+    ); /* If 4 charts, subtract header margin and divide */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Orders Column */
+.orders h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.orders button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.orders button:hover {
+    background-color: #002244;
+}
+
+/* Messages Column */
+.messages h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.message-log {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    height: 50%;
+    padding: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}

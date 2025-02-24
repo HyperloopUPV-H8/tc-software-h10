@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Control Station</title>
+        <link rel="stylesheet" href="main.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Control Station</h1>
+        </header>
+        <main>
+            <div class="container">
+                <!-- Left Column: Charts -->
+                <div class="column charts">
+                    <h2>Charts</h2>
+                    <div class="chart-container">
+                        <canvas id="elevationChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="velocityChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="voltageChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="currentChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Middle Column: Orders -->
+                <div class="column orders">
+                    <h2>Orders</h2>
+                    <button id="btnPrecharge">Precharge</button>
+                    <button id="btnDischarge">Discharge</button>
+                    <button id="btnStartLevitation">Start Levitation</button>
+                    <button id="btnStopLevitation">Stop Levitation</button>
+                    <button id="btnStartMotor">Start Motor</button>
+                    <button id="btnStopMotor">Stop Motor</button>
+                </div>
+
+                <!-- Right Column: Messages -->
+                <div class="column messages">
+                    <h2>Messages</h2>
+                    <div class="message-log">
+                        <p>No messages yet.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
