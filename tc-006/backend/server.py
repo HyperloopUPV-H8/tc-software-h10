@@ -108,8 +108,6 @@ async def telemetry_loop():
 
         await asyncio.sleep(0.1)  # Control update rate
 
-
-
 async def main():
     """Main function to run the WebSocket server."""
     async with websockets.serve(handle_client, "localhost", 6789):
