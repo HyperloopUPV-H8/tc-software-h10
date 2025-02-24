@@ -1,0 +1,86 @@
+/* Body & Overall Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f2f2f2; /* Matches the light gray background in control.css */
+    color: #333;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #003366; /* Dark blue header */
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+main {
+    margin-top: 20px;
+}
+
+/* Sections for Different Pages */
+section {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #003366;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #002244;
+}
+
+/* Status Message styling */
+#statusMessage {
+    font-style: italic;
+    color: #333;
+}
+
+/* Chart container styling (if needed globally) */
+.chart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+footer {
+    font-size: 10px;
+}

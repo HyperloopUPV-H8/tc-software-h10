@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hyperloop Control Station</title>
+        <link rel="stylesheet" href="../css/control.css" />
+        <!-- Load Chart.js from CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Hyperloop Control Station</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="control.html">Control Station</a></li>
+                    <li><a href="packet.html">Packet Generator</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Control Buttons (disabled) -->
+            <section id="controls">
+                <h2>Orders</h2>
+                <button id="startBtn" disabled>Start Vehicle</button>
+                <button id="stopBtn" disabled>Stop Vehicle</button>
+                <button id="raiseBtn" disabled>Increase Elevation</button>
+                <button id="lowerBtn" disabled>Decrease Elevation</button>
+            </section>
+            <!-- Wrap sensor data and messages side by side -->
+            <section id="dataAndMessages">
+                <!-- Sensor Data Display -->
+                <div id="sensorData">
+                    <h2>Packets</h2>
+                    <p>
+                        <strong>Elevation:</strong>
+                        <span id="elevationVal">N/A</span> m
+                    </p>
+                    <p>
+                        <strong>Velocity:</strong>
+                        <span id="velocityVal">N/A</span> km/h
+                    </p>
+                    <p>
+                        <strong>Voltage:</strong>
+                        <span id="voltageVal">N/A</span> V
+                    </p>
+                    <p>
+                        <strong>Current:</strong>
+                        <span id="currentVal">N/A</span> A
+                    </p>
+                </div>
+                <!-- New Messages Area -->
+                <div id="messages">
+                    <h2>Messages</h2>
+                    <div class="message-log">
+                        <p>No messages yet.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Charts Section -->
+            <section id="charts">
+                <div class="chart-container">
+                    <canvas id="elevationChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="velocityChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="voltageChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="currentChart"></canvas>
+                </div>
+            </section>
+        </main>
+        <script src="../scripts/control.js"></script>
+    </body>
+</html>
