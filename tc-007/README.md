@@ -1,6 +1,8 @@
 # Data Packets
 
-The orders are:
+The websocket connection is on address `ws://localhost:6789`
+
+**The orders are:**
 
 - precharge
 - discharge
