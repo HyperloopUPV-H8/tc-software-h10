@@ -6,4 +6,10 @@ Students will work on their presonal branches until their work is approved and r
 
 ## Lessons
 
-- 001 - Introduction to programming
+- 001 // Introduction to programming
+- 002 // Introduction to web dev
+- 003 // Multi-page webs
+- 004 // APIs
+- 005 // GUI web basics
+- 006 // GUI with connection with external backend
+- 007 // Websocket connection for live data display

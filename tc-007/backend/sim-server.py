@@ -1,6 +1,5 @@
 import asyncio
 import json
-import random
 import websockets
 
 # Simulation state variables
@@ -114,7 +113,7 @@ async def send_data(websocket):
             if elevation <= 0:
                 elevation = 0
                 current = 0
-                state = "precharged"
+                state = "initial"
                 print("Levitation stopped. State -> initial.")
         elif state == "discharging":
             voltage -= 50  # Fast discharge: drop 50 V per tick
