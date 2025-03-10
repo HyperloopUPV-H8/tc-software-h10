@@ -12,7 +12,21 @@ function updateDisplay(data) {
     document.getElementById("catsBorn").textContent = data.born;
 }
 
-function getRandomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-}
+document.getElementById("petCat").addEventListener("click", () => {
+    sendOrder("pet");
+});
+document.getElementById("hugCat").addEventListener("click", () => {
+    sendOrder("hug");
+});
+document.getElementById("feedCat").addEventListener("click", () => {
+    sendOrder("feed");
+});
+document.getElementById("birthCat").addEventListener("click", () => {
+    sendOrder("birth");
+});
 
+ws = new WebSocket("ws://localhost:6789");
+function sendOrder(order) {
+    msg = { id: order };
+    ws.send(JSON.stringify(msg));
+}

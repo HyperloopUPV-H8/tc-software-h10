@@ -23,6 +23,11 @@ function sendEventToAllClients(data) {
     });
 }
 
+// Add a route to handle requests to the root URL
+app.get("/", (req, res) => {
+    res.send("Welcome to the Cat Interaction API!");
+});
+
 app.get("/api/stream", (req, res) => {
     res.set({
         "Content-Type": "text/event-stream",
@@ -32,12 +37,12 @@ app.get("/api/stream", (req, res) => {
     res.flushHeaders();
     res.write(":\n\n");
 
-    flag = true;
-    const clientId = 0;
+    let flag = true;
+    let clientId;
     while (flag) {
-        clientId = int(Math.random() * 1000000);
+        clientId = Math.floor(Math.random() * 1000000);
         const newClient = { id: clientId, res };
-        if (clients.includes(newClient)) {
+        if (clients.some(client => client.id === clientId)) {
             flag = true;
         } else {
             clients.push(newClient);
@@ -56,14 +61,15 @@ app.get("/api/stream", (req, res) => {
 
 app.get("/api/data", (req, res) => {
     if (req.headers["cat-petted"]) {
-        catData.petted += req.body.petted;
+        catData.petted += parseInt(req.headers["cat-petted"], 10);
     } else if (req.headers["cat-hugged"]) {
-        catData.hugged += req.body.hugged;
+        catData.hugged += parseInt(req.headers["cat-hugged"], 10);
     } else if (req.headers["cat-fed"]) {
-        catData.fed += req.body.fed;
+        catData.fed += parseInt(req.headers["cat-fed"], 10);
     } else if (req.headers["cat-born"]) {
-        catData.born += req.body.born;
+        catData.born += parseInt(req.headers["cat-born"], 10);
     }
+    res.json(catData);
 });
 
 app.post("/api/data", (req, res) => {
